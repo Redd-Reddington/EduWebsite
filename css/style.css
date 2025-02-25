@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.header{
+    width: 100%;
+    height: 100vh; 
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)) , url(/eduford_img/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* --- This CSS is for other pages apart from HOME --- */
+.pages{
+    width: 100%;
+    min-height: 40vh; 
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)) , url(/eduford_img/banner.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 8px 6px;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+nav img{
+    width: 150px;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: red;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+    
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+   
+}
+
+.textbox{
+    text-align: center;
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    
+}
+
+.textbox h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.textbox p{
+    font-size: 1em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.btn{
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 34px;
+    position: relative;
+    background: none;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #a32828;
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.fa-solid.fa-circle-xmark{
+    display: none;                                           
+}
+
+.fa-solid.fa-bars{
+    display: none;
+}
+
+
+/* --- Course Start --- */
+
+.course{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    padding: 100px;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
+
+p{
+    font-size: 14px;
+    margin-top: 10px;
+    color: gray;
+    padding: 10px;
+}
+
+.row{
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.courseCol{
+    background-color: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    flex-basis: 30%;
+}
+
+/* --- Course end --- */
+
+
+/* --- campus start --- */
+
+.campus{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    padding: 50px;
+}
+
+.campusCol{
+    flex-basis: 30%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    overflow: hidden ;
+}
+
+.campusCol img{
+    width: 100%;
+    border-radius: 10px;
+                                
+}
+
+.base{
+    background-color: rgb(249, 139, 139,0);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    top: 20px;
+    height: 100px;
+    transition: 0.5s;
+}
+
+.base h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-transform: translatex(50%);
+
+}
+
+.campusCol:hover{
+    background-color: rgb(249, 139, 139);
+
+}
+
+
+/* --- campus end --- */
+
+
+
+
+
+/* --- Facilities Start --- */
+
+.facilities{
+    width: 80%;
+    text-align: center;  
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 50px;
+}
+
+.facilitiesCol{
+    flex-basis: 32%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 5%;
+    overflow: hidden;
+    
+}
+
+.facilitiesCol img{
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.facilitiesCol h3{
+    text-align: center;
+}
+
+/* --- Facilities End --- */
+
+
+/* --- Footer Start --- */
+
+.footer{
+    background-image:linear-gradient(rgba(2, 5, 18, 0.7),rgb(4, 9, 30,0.7)) , url(/eduford_img/banner.png);
+    color: white;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.fab{
+    color: #f98;
+
+}
+
+
+/* --- Footer End --- */
+
+
+/* --- Contact Page Start---*/
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px;
+
+}
+
+.contactForm{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.contactForm .contactCol{
+    flex-basis: 30%;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+
+}
+
+.contactCol div{
+    display: flex;
+
+}
+
+.contactCol input,.contactCol textarea{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    outline: none;
+   
+}
+
+.contactCol button{
+    padding: 15px 30px;
+    background-color: #f98b8b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.5s;
+
+}
+
+/* --- Contact Page End --- */
+
+
+/*--- Mobile View Start---*/
+@media (max-width:768px) {
+
+    .row{
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .textbox h1{
+        font-size: 1em;
+
+    }
+
+    .textbox p{
+        font-size: 0.8em;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    .navLinks{
+        display: none;
+        background-color: #fd6d6d;
+        width: 200px;
+        margin: 0px;
+        top: 0px;
+        padding: 10px;
+        right: 0px;
+        z-index: 2px;
+        position: absolute;
+        
+       
+    }
+
+    .fa-solid.fa-circle-xmark{
+        display: block;
+        color: whitesmoke;
+        cursor: pointer;
+
+    }
+
+    .fa-solid.fa-bars{
+        display: block;
+        color: whitesmoke;
+        cursor: pointer;
+
+    }
+    
+    
+}
+
+/*--- Mobile View End ---*/

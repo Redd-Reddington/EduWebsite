@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFord - Home Page</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/290c92d8f4.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "n9O7TXyvphmNfhdHz",
+      });
+   })();
+</script>
+</head>
+<body>
+    <section class="pages" >
+        <nav class="nav">
+            <img src="eduford_img/logo.png" alt="logo">
+            <div class="navLinks" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">COURSE</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="textbox">
+           <h2>Contact Us</h2>
+        </div>
+    </section>
+
+
+
+    <!-- Location-->
+     <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31768.270155332546!2d-0.27496795096133186!3d5.5620132427727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf99006217bb61%3A0x801d5dfb5f8e29da!2sLashibi%20CAC!5e0!3m2!1sen!2sgh!4v1740160490058!5m2!1sen!2sgh" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </section>
+
+
+
+        <!-- Start Contact Form-->
+        <section class="contactForm">
+            <div class="row">
+                <div class="contactCol">
+                    <i class="fa-solid fa-house"></i>
+                <span>
+                    <h5>Eduford University Building</h5>
+                    <p>Eduford, United Arab Emirates,<br>
+                        P.O. Box 12345,<br>
+                        Dubai, UAE.
+                    </p>
+                </span>
+                </div>
+    
+                <div class="contactCol">
+                    <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>+233345676788</h5>
+                    <p>Monday to Sunday,<br>
+                        6am - 11pm.</p>
+                </span>
+                </div>
+                
+                <div class="contactCol">
+                    <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <h5>eduford@eduford.com<h5>
+                    <p>Monday to Sunday, <br>
+                        6am - 11pm.</p>
+                </span>
+                </div>
+            </div>
+
+            <div class="contactCol">
+                <form action="">
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                    <textarea placeholder="Message" id="message" name="message" autocomplete="on" required></textarea>
+                    <button type="submit" onclick="send()">Submit</button>
+                </form>
+                
+           </div>
+
+        </div>
+    </section>
+
+        <!-- End Contact Form-->
+
+    
+
+   
+
+     <!-- Footer Start-->
+     <section class="footer">
+        <p>&copy; 2025 Eduford. All rights Reserved</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+>
+     </section>
+        <!-- Footer End-->
+
+
+        <script src="js/js.js"> </script>
+
+
+
+    <script>
+        var menu = document.getElementById("navLinks");
+        if (window.matchMedia("(min-width: 700px)").matches) {
+          menu.style.display = "block"; // Show menu
+      } else {
+        menu.style.display = "none"; // Hide menu
+  }
+
+       function showMenu() {
+           document.querySelector('.navLinks').style.display = 'block';
+       }
+       function hideMenu() {
+           document.querySelector('.navLinks').style.display = 'none';
+       }
+
+
+       function send() {
+       var templateParams = {
+        name: document.getElementById('name'),
+        email: document.getElementById('email'),
+        message: document.getElementById('message')
+       };
+      
+       emailjs.send('service_87n7yws', 'template_mxdpv46', templateParams).then(
+        (response) => {
+            alert('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+            alert('FAILED...', error);
+        },
+       );
+    
+       }
+
+
+
+   </script>
+
+</body>
+</html>
